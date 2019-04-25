@@ -33,4 +33,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')));
 app.use(require('./routes'));
 
-server.listen(process.env.PORT || 3333);
+if(require.main === module){
+		server.listen(process.env.PORT || 3333);
+}
+
+module.exports == app;
