@@ -5,6 +5,13 @@ const cors = require('cors');
 
 const app = express();
 
+var users = ['John', 'Betty', 'Hal'];
+
+app.get('/api/users', function (req, res) {
+  res.json(users);
+});
+
+
 app.use(cors());
 
 const server = require('http').Server(app);
@@ -31,7 +38,7 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/files', express.static(path.resolve(__dirname, '..', 'temp')));
-app.use(require('./routes'));
+//app.use(require('./routes'));
 
 if(require.main === module){
 		server.listen(process.env.PORT || 3333);
