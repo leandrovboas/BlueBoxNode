@@ -44,4 +44,4 @@ if(require.main === module){
 		server.listen(process.env.PORT || 3333);
 }
 
-module.exports == app;
+module.exports = app;
