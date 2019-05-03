@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "start": "node src/service.js",
+    "start": "node src/server.js",
     "test": "tape ./tests/*.js | tap-spec"
   },
   "dependencies": {
